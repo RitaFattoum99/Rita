@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Rita</title>
+    <script>
+        document.addEventListener("DOMCntentLoaded", function () {
+            document.querySelectorAll("option").forEach(function (op) {
+                console.log("reham");
+                op.onselect(function () {
+                    document.querySelector("h2").style.color = dataset - value;
+                    console.log("rita");
+                    return false;
+                });
+            });
+        });
+    </script>
 </head>
+
 <body>
     <header class="heading">
         <h1 class="h1">Rita</h1>
         <ul>
-            <a href="./Course/sign-up-facebook/index.html"><li>Facebook</li></a>
-            <a href="https://www.google.com/"><li>Google</li></a>
-            <a href="/Rita/Course/Mario/index.html"><li>Mario</li></a>
+            <a href="./Course/sign-up-facebook/index.html">
+                <li>Facebook</li>
+            </a>
+            <a href="https://www.google.com/">
+                <li>Google</li>
+            </a>
+            <a href="/Rita/Course/Mario/index.html">
+                <li>Mario</li>
+            </a>
         </ul>
+
+        <h2>Hello World</h2>
+        <select>
+            <option data-value="red">Red</option>
+            <option data-value="blue">Blue</option>
+            <option data-value="green">Green</option>
+        </select>
     </header>
 </body>
+
 </html>
