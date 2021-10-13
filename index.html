@@ -9,15 +9,11 @@
     <title>Rita</title>
     <script>
         document.addEventListener("DOMCntentLoaded", function () {
-            document.querySelectorAll("option").forEach(function (op) {
-                console.log("reham");
-                op.onselect(function () {
-                    document.querySelector("h2").style.color = dataset - value;
-                    console.log("rita");
-                    return false;
-                });
+            document.querySelector("select").onchange(function () {
+                document.querySelector("h2").style.color = this.value;
             });
         });
+        
     </script>
 </head>
 
@@ -38,9 +34,9 @@
 
         <h2>Hello World</h2>
         <select>
-            <option data-value="red">Red</option>
-            <option data-value="blue">Blue</option>
-            <option data-value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
         </select>
     </header>
 </body>
