@@ -5,9 +5,18 @@ body{
 
 .heading{
     width: 50%;
-margin: 0% auto;
+    margin: 0% auto;
 }
 .h1{
     color: rgb(171, 171, 245);
 
+}
+
+ul{}
+ul li{}
+ul a{
+text-decoration: unset;
+}
+ul a:hover{
+    text-decoration: underline;
 }
