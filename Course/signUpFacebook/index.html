@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <style>
+        body {
+            background-color: rgba(184, 182, 182, 0.568);
+        }
+
+        .both {
+            margin: 10% 3%;
+        }
+
+        .left {
+            /* display: inline; */
+            background-color: white;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 2px 2px 0;
+            box-shadow: rgb(200, 200, 200);
+        }
+
+        /* form {} */
+
+        form input {
+            display: block;
+            height: 25px;
+            margin: 5%;
+            padding: 2px;
+            border-radius: 3px;
+            border: gray solid 0.5px;
+            text-align: end;
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: #1877f2;
+            box-shadow: 0 1px 1px 0 #1877f2;
+        }
+
+        form label {
+            margin-left: 30px;
+            color: #1877f2;
+        }
+
+        a {
+            text-decoration: unset;
+        }
+
+        .submit {
+            background-color: #1877f2;
+            color: white;
+            width: 168px;
+            text-align: center;
+        }
+
+        .button {
+            color: white;
+            background-color: #42b72a;
+            margin: auto;
+        }
+
+        .right {
+            display: inline;
+            position: relative;
+            top: -140px;
+            left: 270px;
+        }
+
+        h1 {
+            color: #1877f2;
+        }
+
+        /* p{} */
+    </style>
+</head>
+
+<body>
+    <!-- my form for sign up -->
+    <div class="both">
+        <div>
+            <div class="left">
+                <form>
+                    <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف" required>
+                    <input type="password" placeholder="كلمة السر" min="8" required>
+                    <input type="submit" class="submit" value="تسجيل الدخول" required>
+                    <label>هل نسيت كلمة المرور؟</label>
+                    <hr>
+                    <a href="creat-account.html"><input type="button" class="button" value="إنشاء حساب جديد"></a>
+                </form>
+            </div>
+            <!-- <p><span style="font-weight: bold;">إنشاء صفحة‏</span> لفرق موسيقية أو مشاهير أو أنشطة تجارية </p> -->
+        </div>
+
+        <div class="right">
+            <h1>Facebook</h1>
+            <p>.يمنحك فيسبوك إمكانية التواصل مع الأشخاص ومشاركة ما تريد معهم</p>
+        </div>
+    </div>
+</body>
+
+</html>

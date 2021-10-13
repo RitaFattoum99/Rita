@@ -1,0 +1,66 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    background-color: red;
+    width: 100%;
+    height: 540;
+    text-align: center;
+    /* z-index: 4; */
+}
+
+h1 {
+    padding: 5px 26px;
+    color: #fff;
+    border: 10px solid #fff;
+    border-radius: 40px;
+    display: inline-block;
+    font-family: tahoma;
+}
+
+img {
+    /* display: block; */
+    width: 100%;
+    margin-top: 13%;
+    position: relative;
+    /* z-index: 2; */
+}
+
+.Welcome {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    color: #fff;
+    background-color: rgb(251, 176, 0);
+    font-family: tahoma;
+}
+
+div ul li {
+    display: inline;
+    margin-left: 8%;
+    font-size: large;
+    color: black;
+}
+
+div ul a {
+    position: sticky;
+    top: 25%;
+    text-decoration: none;
+}
+
+div ul li:hover {
+    text-decoration: underline;
+}
+
+.join {
+    color: red;
+}
+
+.mario {
+    color: red;
+    font-size: x-large;
+    font-weight: bold;
+}
