@@ -59,12 +59,14 @@
                 let height = document.querySelector("#height").value;
                 let weight = document.querySelector("#weight").value;
                 let result = document.querySelector("#result");
+                // let img = document.createElement("")
                 result.value = ((weight * 10000) / (height * height));
                 console.log(`result , ${result.value}`);
                 document.querySelector("#result").innerHTML = Math.round(result.value);
                 if (result.value <= 0 && result.value >= 54) {
                     console.log("Please Enter Your Weight");
                     document.querySelector("#Presult").innerHTML = "Please Enter Your Weight";
+                    // document.querySelector("#imageBMI").append()
                 } else if (result.value >= 19 && result.value <= 24) {
                     console.log("normal");
                     document.querySelector("#Presult").innerHTML = "Normal";
@@ -136,9 +138,10 @@
         <br>
         <button id="click" class="calc">Calculate</button>
         <br>
-        <label>Result</label>
+        <label><b>Result</b></label>
         <input type="text" class="calcInput" id="result" readonly>
         <p id="Presult"></p>
+        <div id="imageBMI" class="imageBMI"></div>
         <!-- End Calculate BMI -->
     </div>
 </body>
