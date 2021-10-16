@@ -50,20 +50,29 @@
                 result.value = ((weight * 10000) / (height * height));
                 console.log(`result , ${result.value}`);
                 document.querySelector("#result").innerHTML = Math.round(result.value);
+                if (result.value <= 0 && result.value >= 54) {
+                    console.log("Please Enter Your Weight");
+                    document.querySelector("#Presult").innerHTML = "Please Enter Your Weight";
+                } else if (result.value >= 19 && result.value <= 24) {
+                    console.log("normal");
+                    document.querySelector("#Presult").innerHTML = "Normal";
+                } else if (result.value >= 25 && result.value <= 29) {
+                    console.log("Overweight");
+                    document.querySelector("#Presult").innerHTML = "Overweight";
+                } else if (result.value >= 30 && result.value <= 39) {
+                    console.log("Obese");
+                    document.querySelector("#Presult").innerHTML = "Obese";
+                } else if (result.value >= 40 && result.value <= 54) {
+                    console.log("Extreme Obese");
+                    document.querySelector("#Presult").innerHTML = "Extreme Obese";
+                } else {
+                    console.log("Enter Again Please");
+                    document.querySelector("#Presult").innerHTML = "Enter Again Please";
+                }
+            
             };
             document.querySelector("#click").onclick = calc;
             //  End Calculate BMI 
-            if (result.value <= 19) {
-                console.log("Please Enter Your Real Weight")
-            } else if (result.value >= 19 && result.value <= 24) {
-                console.log("normal");
-            } else if (result.value >= 25 && result.value <= 29) {
-                console.log("Overweight");
-            } else if (result.value >= 30 && result.value <= 39) {
-                console.log("Obese");
-            } else {
-                console.log("Extreme Obese");
-            }
         });
 
     </script>
@@ -104,15 +113,18 @@
     <!-- End Change Color h1 By Button -->
 
     <!-- Start Calculate BMI -->
-    <h1>Adult BMI Calculatorx</h1>
+    <h1>Adult BMI Calculator</h1>
     <label>Height</label>
     <input type="text" id="height" placeholder="Enter Your Height please">
+    <br>
     <label>Weight</label>
     <input type="text" id="weight" placeholder="Enter Your Weight please">
+    <br>
     <button id="click">calc</button>
     <br>
     <label>Result</label>
     <input type="text" id="result" readonly>
+    <p id="Presult"></p>
     <!-- End Calculate BMI -->
 </body>
 
