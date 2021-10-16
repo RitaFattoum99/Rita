@@ -7,12 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
     <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: rgb(148, 164, 165);
+        }
+
         .container {
             text-align: center;
             width: 100%;
         }
-        .h1BMI{}
-        .calcInput{
+
+        .h1BMI {
+            color: rgb(25, 86, 110);
+        }
+
+        .calcInput {
             margin: 1% 0%;
             border: 2px rgb(25, 86, 110) solid;
             border-radius: 5px;
@@ -21,37 +31,37 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             //Start Count Function
-            let counter = 0;
-            function count() {
-                counter++;
-                document.querySelector("#count").innerHTML = counter;
-            }
-            document.querySelector("#btnCount").onclick = count;
+            // let counter = 0;
+            // function count() {
+            //     counter++;
+            //     document.querySelector("#count").innerHTML = counter;
+            // }
+            // document.querySelector("#btnCount").onclick = count;
             //End Count Function
 
             //Start Change h1 innerHTML Function
-            document.querySelector("#btnChange").onclick = () => {
-                let change = document.querySelector("#h1Hello");
-                if (change.innerHTML === "Hello") {
-                    change.innerHTML = "GoodBye"
-                } else {
-                    change.innerHTML = "Hello"
-                }
-            }
+            // document.querySelector("#btnChange").onclick = function () {
+            //     let change = document.querySelector("#h1Hello");
+            //     if (change.innerHTML === "Hello") {
+            //         change.innerHTML = "GoodBye"
+            //     } else {
+            //         change.innerHTML = "Hello"
+            //     }
+            // }
             //End Change h1 innerHTML Function
 
             //Start Change Color h1 By Select Function
-            document.querySelector("#selectColor").onchange = function () {
-                document.querySelector("#h1Select").style.color = this.value;
-            }
+            // document.querySelector("#selectColor").onchange = function () {
+            //     document.querySelector("#h1Select").style.color = this.value;
+            // }
             //End Change Color h1 By Select Function
 
             //  Start Change Color h1 By Button Function
-            document.querySelectorAll("button").forEach(function (b) {
-                b.onclick = function () {
-                    document.querySelector("#h1Button").style.color = b.dataset.color;
-                }
-            })
+            // document.querySelectorAll("button").forEach(function (b) {
+            //     b.onclick = function () {
+            //         document.querySelector("#h1Button").style.color = b.dataset.color;
+            //     }
+            // })
             //  End Change Color h1 By Button Function
 
             //  Start Calculate BMI 
@@ -59,28 +69,29 @@
                 let height = document.querySelector("#height").value;
                 let weight = document.querySelector("#weight").value;
                 let result = document.querySelector("#result");
-                // let img = document.createElement("")
+                var img = document.createElement("img");
                 result.value = ((weight * 10000) / (height * height));
-                console.log(`result , ${result.value}`);
+                // console.log(`result , ${result.value}`);
                 document.querySelector("#result").innerHTML = Math.round(result.value);
                 if (result.value <= 0 && result.value >= 54) {
-                    console.log("Please Enter Your Weight");
                     document.querySelector("#Presult").innerHTML = "Please Enter Your Weight";
-                    // document.querySelector("#imageBMI").append()
                 } else if (result.value >= 19 && result.value <= 24) {
-                    console.log("normal");
                     document.querySelector("#Presult").innerHTML = "Normal";
+                    img.setAttribute("src", "/github/Rita/photo/normal.png");
+                    document.querySelector("#imageBMI").appendChild(img);
                 } else if (result.value >= 25 && result.value <= 29) {
-                    console.log("Overweight");
                     document.querySelector("#Presult").innerHTML = "Overweight";
+                    img.setAttribute("src", "/github/Rita/photo/obes1.png");
+                document.querySelector("#imageBMI").appendChild(img);
                 } else if (result.value >= 30 && result.value <= 39) {
-                    console.log("Obese");
                     document.querySelector("#Presult").innerHTML = "Obese";
+                    document.querySelector("#Presult").innerHTML = "Overweight";
+                    img.setAttribute("src", "/github/Rita/photo/obes2.png");
                 } else if (result.value >= 40 && result.value <= 54) {
-                    console.log("Extreme Obese");
                     document.querySelector("#Presult").innerHTML = "Extreme Obese";
+                    document.querySelector("#Presult").innerHTML = "Overweight";
+                    img.setAttribute("src", "/github/Rita/photo/obes2.png");
                 } else {
-                    console.log("Enter Again Please");
                     document.querySelector("#Presult").innerHTML = "Enter Again Please";
                 }
 
@@ -131,17 +142,22 @@
         <!-- Start Calculate BMI -->
         <h1 class="h1BMI">Adult BMI Calculator</h1>
         <label><b>Height:</b></label>
-        <input type="text" class="calcInput" id="height" placeholder="Enter Your Height please">
+        <input type="text" class="calcInput" id="height" placeholder="Enter Your Height please" required>
         <br>
         <label><b>Weight:</b></label>
-        <input type="text" class="calcInput" id="weight" placeholder="Enter Your Weight please">
+        <input type="text" class="calcInput" id="weight" placeholder="Enter Your Weight please" required>
         <br>
         <button id="click" class="calc">Calculate</button>
         <br>
-        <label><b>Result</b></label>
+        <label><b>Result:</b></label>
         <input type="text" class="calcInput" id="result" readonly>
         <p id="Presult"></p>
-        <div id="imageBMI" class="imageBMI"></div>
+        <div id="imageBMI" class="imageBMI">
+            <!-- <img src="/github/Rita/photo/normal.png" alt="normal">
+            <img src="/github/Rita/photo/obes1.png" alt="Overweight">
+            <img src="/github/Rita/photo/obes2.png" alt="Obese">
+            <img src="/github/Rita/photo/obes3.png" alt="ExtremeObese"> -->
+        </div>
         <!-- End Calculate BMI -->
     </div>
 </body>
