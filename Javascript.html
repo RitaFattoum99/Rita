@@ -11,6 +11,13 @@
             width: 20%;
             text-align: center;
         }
+        .h1BMI{
+
+        }
+        .calcInput{
+            border: 2px rgb(25, 86, 110) solid;
+            border-radius: 5px;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -121,17 +128,17 @@
         <!-- End Change Color h1 By Button -->
 
         <!-- Start Calculate BMI -->
-        <h1>Adult BMI Calculator</h1>
+        <h1 class="h1BMI">Adult BMI Calculator</h1>
         <label>Height</label>
-        <input type="text" id="height" placeholder="Enter Your Height please">
+        <input type="text" class="calcInput" id="height" placeholder="Enter Your Height please">
         <br>
         <label>Weight</label>
-        <input type="text" id="weight" placeholder="Enter Your Weight please">
+        <input type="text" class="calcInput" id="weight" placeholder="Enter Your Weight please">
         <br>
         <button id="click">calc</button>
         <br>
         <label>Result</label>
-        <input type="text" id="result" readonly>
+        <input type="text" class="calcInput" id="result" readonly>
         <p id="Presult"></p>
         <!-- End Calculate BMI -->
     </div>
