@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rita</title>
+    <title>Rita Page</title>
     <script>
-        document.addEventListener("DOMCntentLoaded", function () {
-            document.querySelector("select").onchange(function () {
-                document.querySelector("h2").style.color = this.value;
-            });
+        document.addEventListener("DOMCntentLoaded",  () => {
+            console.log("Page is loaded");
+            //Start Count Function
+            console.log("start count function");
+            let Counter = 0;
+            function count() {
+                counter++;
+                document.querySelector("#h2Count").innerHTML = counter;
+            }
+            document.querySelector("#buttonCount").onclick = count;
+            //End Count Function
+
+            // document.querySelector("select").onchange(function () {
+            //     document.querySelector("h2").style.color = this.value;
+            // });
         });
-        
+
     </script>
 </head>
 
 <body>
     <header class="heading">
-        <h1 class="h1">Rita</h1>
+        <h1 class="h1">Welcome ^_^</h1>
         <ul>
             <a href="./Course/sign-up-facebook/index.html">
                 <li>Facebook</li>
@@ -27,12 +38,16 @@
             <a href="https://www.google.com/">
                 <li>Google</li>
             </a>
-            <a href="/Rita/Course/Mario/index.html">
+            <a href="./Course/Mario/index.html">
                 <li>Mario</li>
             </a>
         </ul>
-
-        <h2>Hello World</h2>
+        <hr>
+        <h1>Counter Function</h1>
+        <h2 id="h2Count">0</h2>
+        <button id="buttonCount">Count</button>
+        <hr>
+        <h2 id="h2Color">Hello!</h2>
         <select>
             <option value="red">Red</option>
             <option value="blue">Blue</option>
