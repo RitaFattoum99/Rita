@@ -8,13 +8,12 @@
     <title>Javascript</title>
     <style>
         .container {
-            width: 20%;
             text-align: center;
+            width: 100%;
         }
-        .h1BMI{
-
-        }
+        .h1BMI{}
         .calcInput{
+            margin: 1% 0%;
             border: 2px rgb(25, 86, 110) solid;
             border-radius: 5px;
         }
@@ -95,47 +94,47 @@
     <div class="container">
 
         <!-- Start Count -->
-        <h1>Counter:</h1>
+        <!-- <h1>Counter:</h1>
         <h2 id="count">0</h2>
         <button id="btnCount">count</button>
-        <hr>
+        <hr> -->
         <!-- End Count -->
 
         <!-- Start Change h1 -->
-        <h1 id="h1Hello">Hello</h1>
+        <!-- <h1 id="h1Hello">Hello</h1>
         <button id="btnChange">change</button>
-        <hr>
+        <hr> -->
         <!-- End Change h1 -->
 
         <!-- Start Change Color h1 By Select -->
-        <h1 id="h1Select">Hello</h1>
+        <!-- <h1 id="h1Select">Hello</h1>
         <select id="selectColor">
             <option value="red">Red</option>
             <option value="blue">blue</option>
             <option value="green">Green</option>
             <option value="purple">Purple</option>
         </select>
-        <hr>
+        <hr> -->
         <!-- End Change Color h1 By Select -->
 
         <!-- Start Change Color h1 By Button -->
-        <h1 id="h1Button">Hello</h1>
+        <!-- <h1 id="h1Button">Hello</h1>
         <button data-color="red">Red</button>
         <button data-color="blue">Blue</button>
         <button data-color="green">Green</button>
         <button data-color="purple">Purple</button>
-        <hr>
+        <hr> -->
         <!-- End Change Color h1 By Button -->
 
         <!-- Start Calculate BMI -->
         <h1 class="h1BMI">Adult BMI Calculator</h1>
-        <label>Height</label>
+        <label><b>Height:</b></label>
         <input type="text" class="calcInput" id="height" placeholder="Enter Your Height please">
         <br>
-        <label>Weight</label>
+        <label><b>Weight:</b></label>
         <input type="text" class="calcInput" id="weight" placeholder="Enter Your Weight please">
         <br>
-        <button id="click">calc</button>
+        <button id="click" class="calc">Calculate</button>
         <br>
         <label>Result</label>
         <input type="text" class="calcInput" id="result" readonly>
