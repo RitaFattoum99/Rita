@@ -5,54 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Rita Page</title>
-    <script>
-        document.addEventListener("DOMCntentLoaded",  () => {
-            console.log("Page is loaded");
-            //Start Count Function
-            console.log("start count function");
-            let Counter = 0;
-            function count() {
-                counter++;
-                document.querySelector("#h2Count").innerHTML = counter;
-            }
-            document.querySelector("#buttonCount").onclick = count;
-            //End Count Function
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
 
-            // document.querySelector("select").onchange(function () {
-            //     document.querySelector("h2").style.color = this.value;
-            // });
-        });
+        header nav {
+            width: 100%;
+        }
 
-    </script>
+        /* nav ul {} */
+
+        nav ul li {
+            display: inline;
+
+        }
+
+        nav ul a {
+            margin: 0% 4%;
+            text-align: end;
+            text-decoration: unset;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        nav ul a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="heading">
-        <h1 class="h1">Welcome ^_^</h1>
-        <ul>
-            <a href="./Course/sign-up-facebook/index.html">
-                <li>Facebook</li>
-            </a>
-            <a href="https://www.google.com/">
-                <li>Google</li>
-            </a>
-            <a href="./Course/Mario/index.html">
-                <li>Mario</li>
-            </a>
-        </ul>
-        <hr>
-        <h1>Counter Function</h1>
-        <h2 id="h2Count">0</h2>
-        <button id="buttonCount">Count</button>
-        <hr>
-        <h2 id="h2Color">Hello!</h2>
-        <select>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-        </select>
+    <header>
+        <nav>
+            <ul>
+                <a href="#">
+                    <li>facebook</li>
+                </a>
+                <a href="#">
+                    <li>Mario</li>
+                </a>
+                <a href="Javascript.html">
+                    <li>Function</li>
+                </a>
+            </ul>
+        </nav>
     </header>
 </body>
 
