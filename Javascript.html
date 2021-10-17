@@ -73,35 +73,23 @@
                 let result = document.querySelector("#result");
                 let img = document.createElement("img");
                 result.value = ((weight * 10000) / (height * height));
-                // console.log(`result , ${result.value}`);
                 document.querySelector("#result").innerHTML = Math.round(result.value);
-                if (result.value <= 0 && result.value >= 54) {
-                    // document.querySelector("#Presult").innerHTML = "Please Enter Your Weight";
-                    alert("Please Enter Your Weight again");
-                } else if (result.value >= 19 && result.value <= 24) {
+                if (result.value <= 18.5) {
+                    document.querySelector("#Presult").innerHTML = "Underweight";
+                    img.setAttribute("src" , "/photo/under.png");
+                    document.querySelector("#imageBMI").appendChild(img);
+                } else if (result.value >= 18.5 && result.value <= 24.9) {
                     document.querySelector("#Presult").innerHTML = "Normal";
-                    // document.querySelector(img).remove;
-                    img.setAttribute("src", "/github/Rita/photo/normal.png");
+                    img.setAttribute("src", "/photo/normal.png");
                     document.querySelector("#imageBMI").appendChild(img);
-                } else if (result.value >= 25 && result.value <= 29) {
-                    // document.querySelector(img).remove;
+                } else if (result.value >= 25 && result.value <= 29.9) {
                     document.querySelector("#Presult").innerHTML = "Overweight";
-                    img.setAttribute("src", "/github/Rita/photo/obes1.png");
+                    img.setAttribute("src", "/photo/obes1.png");
                     document.querySelector("#imageBMI").appendChild(img);
-                } else if (result.value >= 30 && result.value <= 39) {
-                    // document.querySelector(img).remove;
-                    document.querySelector("#Presult").innerHTML = "Obese";
-                    img.setAttribute("src", "/github/Rita/photo/obes2.png");
-                } else if (result.value >= 40 && result.value <= 54) {
-                    // document.querySelector(img).remove;
-                    document.querySelector("#Presult").innerHTML = "Extreme Obese";
-                    img.setAttribute("src", "/github/Rita/photo/obes2.png");
                 } else {
-                    // document.querySelector("#Presult").innerHTML = "Enter Again Please";
-                    // document.querySelector(img).remove;
-                    alert("Enter Again Please");
-                }
-
+                    document.querySelector("#Presult").innerHTML = "Obese";
+                    img.setAttribute("src", "/photo/obes2.png");
+                } 
             };
             document.querySelector("#click").onclick = calc;
             //  End Calculate BMI 
