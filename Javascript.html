@@ -76,28 +76,29 @@
                 // Underweight
                 if (result.value <= 18.5) {
                     document.querySelector("#Presult").innerHTML = "Underweight";
-                    img.setAttribute("src", "/photo/under.png");
-                    document.querySelector("#imageBMI").appendChild(img);
+                    // img.setAttribute("src", "/photo/under.png");
+                    // document.querySelector("#imageBMI").appendChild(img);
                     console.log("underweight");
                 }
                 // Normal
                 else if (result.value >= 18.5 && result.value <= 24.9) {
                     document.querySelector("#Presult").innerHTML = "Normal";
-                    img.setAttribute("src", "/photo/normal.png");
-                    document.querySelector("#imageBMI").appendChild(img);
+                    // img.setAttribute("src", "/photo/normal.png");
+                    // document.querySelector("#imageBMI").appendChild(img);
                     console.log("normal");
                 }
                 // Overweight
                 else if (result.value >= 25 && result.value <= 29.9) {
                     document.querySelector("#Presult").innerHTML = "Overweight";
-                    img.setAttribute("src", "/photo/obes1.png");
-                    document.querySelector("#imageBMI").appendChild(img);
+                    // img.setAttribute("src", "/photo/obes1.png");
+                    // document.querySelector("#imageBMI").appendChild(img);
                     console.log("overweight");
                 }
                 // Obesity 
                 else {
                     document.querySelector("#Presult").innerHTML = "Obese";
-                    img.setAttribute("src", "/photo/obes2.png");
+                    // img.setAttribute("src", "/photo/obes2.png");
+                    // document.querySelector("#imageBMI").appendChild(img);
                     console.log("obese");
                 }
                 document.querySelector("#click").onclick = calc;
