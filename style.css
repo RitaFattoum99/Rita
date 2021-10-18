@@ -1,22 +1,33 @@
-body{
+ body{
     margin: 0%;
     padding: 0%;
 }
 
-.heading{
-    width: 50%;
-    margin: 0% auto;
+
+header nav {
+    width: 100%;
+    background-color: beige;
+    padding: 1%;
+    text-align: end;
 }
-.h1{
-    color: rgb(171, 171, 245);
+
+/* nav ul {} */
+
+nav ul li {
+    display: inline;
 
 }
 
-ul{}
-ul li{}
-ul a{
-text-decoration: unset;
+nav ul a {
+    margin: 0% 4%;
+    text-align: end;
+    text-decoration: unset;
+    font-weight: bold;
+    font-size: large;
+    font-family: cursive;
+    color: black;
 }
-ul a:hover{
+
+nav ul a:hover {
     text-decoration: underline;
 }

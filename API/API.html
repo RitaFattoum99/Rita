@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <script>
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     fetch("https://api.exchangerate.host/latest?base=USD").then((response)
+        //         => response.json()).then((date) => {
+        //             document.querySelector("form").onsubmit = () => {
+
+        //             }
+        //         })
+        // });
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("medicine.json").then((response)=> response.json()).then((data) =>{
+ 
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <form>
+        <input type="text" placeholder="currency" id="currency">
+        <input type="submit" value="change">
+    </form>
+    <h1></h1> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Titer</th>
+                <th>Form</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
