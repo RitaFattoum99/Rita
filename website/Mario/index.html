@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            /* background-color: rgb(212, 175, 175); */
+        }
+
+        .header {
+            position: fixed;
+            background-color: red;
+            width: 100%;
+            height: 500;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            padding: 5px 26px;
+            color: #fff;
+            border: 10px solid #fff;
+            border-radius: 40px;
+            display: inline-block;
+            font-family: tahoma;
+        }
+
+        .image {
+            margin-bottom: -1%;
+        }
+
+        .mario-image {
+            width: 100%;
+            margin-top: 7%;
+            position: relative;
+        }
+
+        .Welcome {
+            position: absolute;
+            top: 48%;
+            left: 0;
+            width: 40%;
+            /* height: 60%; */
+            /* text-align: center; */
+            font-size: xxx-large;
+            color: #fff;
+            background-color: rgb(251, 176, 0);
+        }
+
+
+        .Welcome h2 {
+            margin-left: 8%;
+            line-height: 1.4;
+        }
+
+        .maioclub {
+            /* width: max-content; */
+            font-weight: bold;
+        }
+
+        .nav {
+            position: sticky;
+            top: 17%;
+            background-color: #fff;
+            padding: 1%;
+        }
+
+        nav ul {
+            text-align: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0% 5%;
+            font-size: large;
+            color: black;
+        }
+
+        nav ul a {
+            /* position: sticky;
+            top: 25%; */
+            text-decoration: none;
+        }
+
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+
+        .join {
+            color: red;
+        }
+
+        .mario {
+            color: red;
+            font-size: xxx-large;
+            font-weight: bold;
+            margin: 5%;
+        }
+
+        .paragraph {
+            margin: -2% 5%;
+        }
+
+        .paragraph::first-line {
+            font-weight: bold;
+        }
+
+        /* .thumb-1,
+        .thumb-2 {
+            width: 30%;
+            height: 30%;
+            margin: 8% 0%;
+        } */
+
+        /* .thumb-1:hover {
+            transform: scale(1.1);
+            /* margin:1px 1px 0px 0px; */
+        /* } */
+
+        /* .thumb-2:hover {
+            transform: scale(1.1);
+        } */ */
+
+        /* .image1,
+        .image2 {
+            display: inline;
+            margin: 0% 9%;
+        } */
+
+.image ul li {
+    display: inline;
+}
+
+.image ul{
+text-align: center;
+}
+
+.image ul li img{
+width: 460px;
+}
+
+        .today {
+            font-weight: bold;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        .paragraph2 {
+            margin: 2% 5%;
+        }
+
+        .email {
+            border: none;
+            margin: 0% 44% 5%;
+            padding: 0.5%;
+            border-radius: 8px;
+
+        }
+
+        .email:focus {
+            border: 3px dashed #000;
+            border-radius: 30px;
+            outline: none;
+        }
+
+        .email:valid {
+            border: 3px solid green;
+            border-radius: 30px;
+            outline: none;
+        }
+
+        footer {
+            color: #fff;
+            background-color: red;
+            text-align: center;
+            font-size: large;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Marioclub</h1>
+    </div>
+
+    <div class="image">
+        <img class="mario-image" src="img/banner.png" alt="mario image">
+    </div>
+
+    <div class="Welcome">
+        <h2>Welcome to <span class="maioclub">Marioclub</span></h2>
+    </div>
+
+    <nav class="nav">
+
+
+        <ul>
+            <a href="#">
+                <li class="join">Join the club</li>
+            </a>
+            <a href="#">
+                <li>Latest news</li>
+            </a>
+            <a href="#">
+                <li>New games</li>
+            </a>
+            <a href="#">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div>
+        <p class="mario">It's a me , Mario</p>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, perferendis excepturi!
+            Officiis sequi quisquam
+            vero voluptatum, eius laudantium cupiditate nam earum. Iure corporis ea fugiat, facilis totam cum ipsam
+            explicabo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa quas, totam, assumenda eos animi
+            asperiores voluptatibus repudiandae aspernatur ad eveniet fugiat, reprehenderit vitae molestiae commodi
+            laudantium facere dolorum a cumque Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            ducimus facere libero ipsa sequi et, facilis ratione tempore in quis reprehenderit officia cum provident
+            alias officiis excepturi? Cum, id dolorem!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aut optio, qui tempora aspernatur et ad nulla
+            ex aperiam maxime, voluptatibus laboriosam sapiente odit rem vero blanditiis reiciendis iure beatae.
+        </p>
+    </div>
+
+    <!-- <div class="image1">
+        <img class="thumb-1" src="/img/thumb-1.png" alt="thumb-1">
+    </div>
+    <div class="image2">
+        <img class="thumb-2" src="/img/thumb-2.png" alt="thumb-2">
+    </div> -->
+
+    <div class="images"></div>
+<ul>
+    <li><img class="thumb-1" src="img/thumb-1.png" alt="thumb-1"></li>
+    <li><img class="thumb-2" src="img/thumb-2.png" alt="thumb-2"></li>
+</ul>
+    <div>
+        <p class="today">Join Today!</p>
+        <p class="paragraph2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, hic? Voluptate
+            adipisci debitis commodi
+            fugiat accusamus nobis, voluptatem ad enim iure ea, accusantium non deleniti fugit dolore! Magni,
+            accusantium ut.</p>
+        <br><br>
+        <input type="email" class="email" placeholder="Type email & hit enter" required>
+    </div>
+
+    <footer>
+        <p class="footer">Copyright 2019 Marioclub</p>
+
+    </footer>
+</body>
+
+</html>
