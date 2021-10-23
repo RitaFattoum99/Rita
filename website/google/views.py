@@ -9,13 +9,19 @@ def index(request):
 # def greet(request ,name):
 #     return HttpResponse(f"Hello, {name}!".title())
 
-# def greet(request, name):
-#     return render (request, 'hello/index.html', {
-#         "name" : name.title()
-#     })
+def greet(request, name):
+    return render (request, 'hello/index.html', {
+        "name" : name.title()
+    })
 
-def christmas(request):
-    now = datetime.datetime.now()
-    return render(request, 'hello/index.html', {
-        "christmas" : now.month == 1 and now.day == 1 
+# def christmas(request):
+#     now = datetime.datetime.now()
+#     return render(request, 'hello/index.html', {
+#         "christmas" : now.month == 1 and now.day == 1 
+#     })    
+
+def birth(request, birth):
+    today = datetime.datetime.now()
+    return render(request, 'hello/index.html' ,{
+        "age" : today.year - birth
     })

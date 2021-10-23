@@ -1,16 +1,3 @@
-
-oper = input("Enter The Operation please: ")
-num01 = int(input("Enter THe First Number please: "))
-num02 = int(input("Enter THe Second Number please: "))
-
-
-
-
-
-
-
-
-
 import sys
 
 try:
