@@ -1,3 +1,16 @@
+
+oper = input("Enter The Operation please: ")
+num01 = int(input("Enter THe First Number please: "))
+num02 = int(input("Enter THe Second Number please: "))
+
+
+
+
+
+
+
+
+
 import sys
 
 try:
@@ -63,3 +76,4 @@ for person in people:
     if flight.add_passenger(person):
         print(f"Added {person} in the flight successfully!")
     else:
+     print(f"No Available Seats for {person}")
