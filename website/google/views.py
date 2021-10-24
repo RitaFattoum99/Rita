@@ -3,6 +3,8 @@ from django.shortcuts import render
 import datetime
 # Create your views here.
 
+app_name ="google"
+
 def index(request):
     return HttpResponse("Hello World!")
 
