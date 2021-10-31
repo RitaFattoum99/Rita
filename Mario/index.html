@@ -14,7 +14,7 @@
             /* background-color: rgb(212, 175, 175); */
         }
 
-        .header {
+        header {
             position: fixed;
             background-color: red;
             width: 100%;
@@ -127,25 +127,35 @@
 
         /* .thumb-2:hover {
             transform: scale(1.1);
-        } */ */
-
+        } */
+        */
         /* .image1,
         .image2 {
             display: inline;
             margin: 0% 9%;
         } */
 
-.image ul li {
-    display: inline;
-}
+        .image ul li {
+            display: inline;
 
-.image ul{
-text-align: center;
-}
+        }
 
-.image ul li img{
-width: 460px;
-}
+        .image ul {
+            text-align: center;
+        }
+
+        .imgs ul li .limg  { width: 500px;
+        margin :50px;
+
+
+    }
+    .imgs ul li .limg:hover  { width: 500px;
+        margin :50px;
+        position: relative;
+        top :-5px;
+
+
+    }
 
         .today {
             font-weight: bold;
@@ -188,17 +198,17 @@ width: 460px;
 </head>
 
 <body>
-    <div class="header">
+    <header>
         <h1>Marioclub</h1>
-    </div>
+    </header>
 
     <div class="image">
         <img class="mario-image" src="img/banner.png" alt="mario image">
     </div>
-
+    <!-- 
     <div class="Welcome">
         <h2>Welcome to <span class="maioclub">Marioclub</span></h2>
-    </div>
+    </div> -->
 
     <nav class="nav">
 
@@ -234,18 +244,19 @@ width: 460px;
         </p>
     </div>
 
-    <!-- <div class="image1">
-        <img class="thumb-1" src="/img/thumb-1.png" alt="thumb-1">
-    </div>
-    <div class="image2">
-        <img class="thumb-2" src="/img/thumb-2.png" alt="thumb-2">
-    </div> -->
-
-    <div class="images"></div>
-<ul>
-    <li><img class="thumb-1" src="img/thumb-1.png" alt="thumb-1"></li>
-    <li><img class="thumb-2" src="img/thumb-2.png" alt="thumb-2"></li>
-</ul>
+    <ul>
+        <li>
+            <img src="img/thumb-1.png" class="limg">
+        </li>
+        <li>
+            <img src="img/thumb-2.png" class="limg">
+        </li>
+    </ul>
+    <!-- <div class="images"></div>
+    <ul>
+        <li><img class="thumb-1" src="img/thumb-1.png" alt="thumb-1"></li>
+        <li><img class="thumb-2" src="img/thumb-2.png" alt="thumb-2"></li>
+    </ul> -->
     <div>
         <p class="today">Join Today!</p>
         <p class="paragraph2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, hic? Voluptate
