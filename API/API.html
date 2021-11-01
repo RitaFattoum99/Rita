@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript API</title>
     <script>
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     fetch("https://api.exchangerate.host/latest?base=USD").then((response)
-        //         => response.json()).then((date) => {
-        //             document.querySelector("form").onsubmit = () => {
-
-        //             }
-        //         })
-        // });
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch("medicine.json").then((response)=> response.json()).then((data) =>{
- 
-            });
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://api.exchangerate.host/latest?base=USD").then(
+          (response) =>
+            response
+              .json()
+              .then((data) => {
+                document.querySelector("form").onsubmit = function () {
+                  const currency = document
+                    .querySelector("#currency")
+                    .value.toUpperCase();
+                  document.querySelector(
+                    "h1"
+                  ).innerHTML = `1 USD equals ${data.rates[currency].toFixed(
+                    2
+                  )} ${currency}`;
+                  return false;
+                };
+                console.log(data.rates.AED);
+                document.querySelector(
+                  "h1"
+                ).innerHTML = `1 USD Equals ${data.rates.AED.toFixed(2)} AED.`;
+              })
+              .catch((error) => {
+                console.log(error);
+              })
+        );
+      });
     </script>
-</head>
-
-<body>
-    <!-- <form>
-        <input type="text" placeholder="currency" id="currency">
-        <input type="submit" value="change">
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Currency" id="currency" />
+      <input type="submit" value="Change" />
     </form>
-    <h1></h1> -->
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Titer</th>
-                <th>Form</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-
-            </tr>
-        </tbody>
-    </table>
-</body>
-
+    <h1></h1>
+  </body>
 </html>
