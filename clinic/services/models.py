@@ -28,5 +28,5 @@ class Patients(models.Model):
     def __str__(self):
         return f"Name: {self.f_name} {self.l_name} Birth: {self.birth} Email: {self.email} Symptoms: {self.symptoms}"
 
-class Calendar(models.Model):
+# class Calendar(models.Model):
     
